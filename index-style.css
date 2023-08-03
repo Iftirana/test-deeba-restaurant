@@ -146,7 +146,7 @@
     width: 100%;
     height: 550px;
     position: relative;
-    background: url('bilder\bg-bild2.jpg') no-repeat;
+    background: url('./bilder/bg-bild2.jpg') no-repeat;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
