@@ -1,0 +1,276 @@
+
+/* Risponsive header fängt an*/
+.header { 
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+  padding: 0 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo-und-name {
+  float: left;
+}
+.logo-und-name h1 {
+  font-size: x-large; /*1.5em*/
+  font-weight: 800;
+  margin: .9em 0 0 0;
+  display: inline-block;
+}
+.logo-und-name img {
+  max-width: 55px;
+  float: left;
+  margin: 7px 10px 8px 10px;
+} 
+.nav  .nav-header {
+  display: inline;
+}
+.nav  .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+}
+.nav  .nav-btn {
+  display: none;
+}
+.nav  .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+.nav  .nav-links > a {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+.nav  .nav-links > a:hover {
+  background-color: #c80808bc;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+}
+.nav  #nav-check  {
+  display: none;
+}
+.korb{
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+.loginsymbol{
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+.count-items{
+  position: relative;
+  bottom: 25px;
+}
+@media screen and  (max-width:920px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(78, 65, 65, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
+    position: fixed;
+    z-index: 99;
+    display: block;
+    width: 40%;
+    height: 50%;
+    background-color: #df0a0a;
+    transition: all 0.1s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 60%;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0%;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(48vh - 10px);
+    overflow-y: auto;
+  }
+  .mape{
+    height: calc(30px - 10px) ;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo-und-name h1 {
+    font-size: small;
+    font-weight: 850;
+    margin-top: 13%;
+  }
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(179, 177, 177);
+}
+
+* {
+box-sizing: border-box;
+}
+.header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+
+/* Add padding to containers */
+.container {
+max-width: 900px;
+height: fit-content;
+margin: 100px auto 0px auto;
+padding: 16px;
+background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+width: 100%;
+padding: 15px;
+margin: 5px 0 22px 0;
+display: inline-block;
+border: none;
+background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+background-color: #ddd;
+outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+border: 1px solid #f1f1f1;
+margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+background-color: #04AA6D;
+color: white;
+padding: 16px 20px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 100%;
+opacity: 0.9;
+}
+
+.registerbtn:hover {
+opacity: 1;
+}
+
+/* Add a blue text color to links */
+a {
+color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+margin-top: 20px;
+background-color: #f1f1f1;
+text-align: center;
+}  
+
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
+    width: 30%;
+  }
+  .card {
+    height: 150px;
+  }
+  .card p {
+    font-size: small;
+    height: 100%;
+  }
+  .auswahl-btn{
+    font-size: small;
+  }
+  .gericht-art1 {
+    width: 96%;
+    margin-left: 2.8%;
+  }
+  .gericht-art{
+    width: 96%;
+    margin-left: 2.8%;
+  }
+}  
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 30%;
+  }
+  .card {
+    height: 130px;
+  }
+  .card p {
+    font-size: xx-small;
+    height: 100%;
+  }
+  .auswahl-btn{
+    font-size: x-small;
+  }
+  .gericht-art1{
+    width: 95%;
+    margin-left: 2.8%;
+  }
+  .gericht-art{
+    width: 95%;
+    margin-left: 2.8%;
+  }
+}
+@media screen and (max-width: 400px) {
+.logo-und-name h1 {
+  font-size: 10px;
+  font-weight: 700;
+  margin-top: 13%;
+
+}
+.card p {
+  font-size: x-small;
+  font-weight: 400;
+}
+.menuname {
+  font-size: 10px ;
+  font-weight: 100;
+}
+}
+

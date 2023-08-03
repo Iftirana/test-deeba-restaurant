@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login</title>
+  <link rel="stylesheet" href="anmelden-style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo-und-name">
+      <a href="index.html"><img src="bilder\deeba2.png" alt="Deeba Restourant logo" /></a>
+      <h1><a href="index.html">Deeba Restaurant</a></h1>
+    </div>  
+<label>
+  <div class="nav"> 
+<input type="checkbox" id="nav-check">
+</label>
+<div class="nav-header">
+</div>
+<div class="nav-btn">
+  <label for="nav-check">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+</div>
+<div class="nav-links">
+  <a href="speisekarte.html">Speisekarte</a>
+  
+  <a href="speisekarte.html">Bestellen</a>
+  <a href="index.html#text3">Reservieren</a>
+  <a href="anmelden.html"><img class="loginsymbol" src="bilder\login.png" alt="loginsymbol"></a>
+  <a href="warenkorb.html" class="open-button" onclick="openForm()"><img class="korb" src="bilder\korb.png" alt="warenkorb">
+    <span class="count-items">0</span>
+  </a>
+</div>
+</div>
+</header>
+    <form >
+      <div class="container">
+        <h1>Anmelden</h1>
+        <hr>
+    
+        <label for="email"><b>Email</b></label>
+        <input type="text" placeholder="Email eigeben" name="email" id="email" required>
+    
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Passwort eigeben" name="psw" id="psw" required>
+        
+        <hr>    
+        <button type="submit" class="registerbtn">Anmelden</button>
+      </div>
+      
+      <div class="container signin">
+        <p>bestellst du zum ersten mal über die website? <a href="registieren.html"> Registieren </a>.</p>
+      </div>
+    </form>
+
+    <script src="scripct.js"></script>
+</body>
+</html>

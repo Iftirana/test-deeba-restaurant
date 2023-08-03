@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="speisekarte-stlyle.css">
+    <title>Deeba Restourant</title>
+    <link rel="shortcut icon" href="bilder\deeba2.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Risponsive header fangt an-->
+    <header class="header">
+       <div class="logo-und-name">
+          <a href="index.html"><img src="bilder\deeba2.png" alt="Deeba Restourant logo" /></a>
+          <h1><a href="index.html">Deeba Restaurant</a></h1>
+        </div>  
+    <label>
+      <div class="nav"> 
+    <input type="checkbox" id="nav-check">
+  </label>
+    <div class="nav-header">
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <div class="nav-links">
+      <a href="speisekarte.html">Speisekarte</a>
+      <a href="speisekarte.html">Bestellen</a>
+      <a href="index.html#text3">Reservieren</a>
+      <a href="anmelden.html"><img class="loginsymbol" src="bilder\login.png" alt="loginsymbol"></a>
+      <a href="warenkorb.html" class="open-button" onclick="openForm()"><img class="korb" src="bilder\korb.png" alt="warenkorb">
+      <span class="count-items">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <!-- Bestelbilder fangen hier an -->
+  <main>
+    <section>
+<div class="boxesContainer1">
+    <p class="gericht-art1">Fleischgerichte</p>
+  <!--Bildrahmen NO. 1-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Chicken Tikka</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\deeba2.png" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 9,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 2-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Chicken Qorma</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\masala.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 10,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 3-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Chicken Masala</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\deeba2.png" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 8,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 4-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Butter Chicken</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\chicken.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 5-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Chicken Saag</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\chicken.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 6-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Beef Kebaab</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\beef.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 7-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Beef Spinat</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\beef.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 8-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Grill Kotelett</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\grill.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 9-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Mutton Masala </h3>
+    </div> 
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\mutton.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 10-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Mutton Saag</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\mutton.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  <!--Bildrahmen NO. 11-->
+  <div class="cardBox">
+      <div class="menuname">
+        <h3>Mutton Spinat</h3>
+      </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\mutton.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+    </div>
+      <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 12-->
+  <div class="cardBox">
+      <div class="menuname">
+        <h3>Mutton Spinat</h3>
+      </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\mutton.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+    </div>
+      <Button class="auswahl-btn">Auswählen</button>
+    </div>
+</div>
+</section>
+<!--hier fängt das zweite gericht-art an-->
+<section>
+  <p class="gericht-art"> Vegitarische gerichte </p>
+  <div class="boxesContainer">
+  <!--Bildrahmen NO. 1-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Palak Panir</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\vegi.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 9,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 2-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Mix Sabsi</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\vegi.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 10,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 3-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Saag</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\vegi.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 8,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 4-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Bindi</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\vegi.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+    <div class="preis">
+      <p> 11,90 €  </p>
+  </div>
+  <Button class="auswahl-btn">Auswählen</button>
+  </div>
+  </div>
+  <section>
+    <!--hier fängt das zweite gericht-art an-->
+<section>
+  <p class="gericht-art"> Suppen </p>
+  <div class="boxesContainer">
+  <!--Bildrahmen NO. 1-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Hänchen Suppe</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\suppe.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 9,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  <!--Bildrahmen NO. 2-->
+    <div class="cardBox">
+      <div class="menuname">
+        <h3>Daal/Linzen Suppe</h3>
+    </div>
+      <div class="card">
+        <div class="front">
+          <img class="bild" src="bilder\suppe.jpg" alt="Chicken Tikka Masala">
+        </div>
+        <div class="back">
+          <p>Chicken Tikka Masala wird mit Hänchen,
+            Tiryaki Sauce, pakistanischen gewürzen
+            und scharfe chili zubereitet
+          </p>
+        </div>
+      </div>
+      <div class="preis">
+        <p> 10,90 €  </p>
+    </div>
+    <Button class="auswahl-btn">Auswählen</button>
+    </div>
+  </div>
+</section>
+
+</main>
+ <script src="scripct.js"></script>
+</body>
+</html>

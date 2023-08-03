@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="warenkorb-style.css">
+    <title>Deeba Restourant</title>
+    <link rel="shortcut icon" href="bilder\deeba2.png" type="image/x-icon">
+</head>
+<body>
+  <!-- Risponsive header fangt an-->
+    <header class="header">
+       <div class="logo-und-name">
+          <a href="index.html"><img src="bilder\deeba2.png" alt="Deeba Restourant logo" /></a>
+          <h1><a href="index.html">Deeba Restaurant</a></h1>
+        </div>  
+    <label>
+      <div class="nav"> 
+    <input type="checkbox" id="nav-check">
+  </label>
+    <div class="nav-header">
+    </div>
+    <div class="nav-btn">
+      <label for="nav-check">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+    </div>
+    <div class="nav-links">
+      <a href="speisekarte.html">Speisekarte</a>
+      <a href="speisekarte.html">Bestellen</a>
+      <a href="index.html#text3">Reservieren</a>
+      <a href="anmelden.html"><img class="loginsymbol" src="bilder\login.png" alt="loginsymbol"></a>
+      <a href="warenkorb.html" class="open-button" onclick="openForm()"><img class="korb" src="bilder\korb.png" alt="warenkorb">
+      <span class="count-items">0</span>
+      </a>
+    </div>
+  </div>
+</header>
+<!--warenkorb form. in normal form hidden-->
+        <div class="products-container">
+          <div class="product-header">
+            <h5 class="product-title">Artikal</h5>
+            <h5 class="price">Preis</h5>
+            <h5 class="quantity">Anzahl</h5>
+            <h5 class="total">Gesamtpreis</h5>
+          </div>
+          <div class="products">
+
+          </div>
+        </div>
+        
+        <div class="for-btn">
+        <button type="button" class="btn cancel" onclick="history.back()">Warenkorb schließen</button>
+        <button type="button" class="btn kasse">ZUR KASSE</button>
+        </div>
+     
+
+<!--iframe für google navi fängt an-->
+<!--<div class="mape">
+        <h4>Auf Google Mape öffnen </h4>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10647.902261104316!2d11.5723144!3d48.1492763!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e75eebc30d6f3%3A0x8ae4fc6a130ce48a!2sRestaurant%20Deeba!5e0!3m2!1sde!2sde!4v1689634883349!5m2!1sde!2sde"
+       ></iframe>
+    </div>
+     -->
+ 
+      <script src="scripct.js"></script>
+</body>
+</html>
