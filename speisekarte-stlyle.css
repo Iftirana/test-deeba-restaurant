@@ -227,8 +227,13 @@ body {
     height: 100%;
     padding: 0em;
     position: absolute;
-    text-align: center;
+    text-align: center; 
     width: 100%;
+  }
+  .cardBox img {
+    object-fit:cover;
+    height: 100%;
+
   }
   .card  strong {
     background: #fff;

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Warenkorb</title>
+</head>
+<body>
+  <h1>Produkt</h1>
+  <p>Preis: $10</p>
+  <p>Warenkorb: <span id="cartCount">0</span></p>
+  <p>Gesamt: $<span id="totalPrice">0</span></p>
+  <button onclick="addToCart()">In den Warenkorb</button>
+  <button onclick="removeFromCart()">Vom Warenkorb entfernen</button>
+
+  <script>
+    // Überprüfen, ob LocalStorage den Warenkorb bereits enthält
+    const cartCountElement = document.getElementById('cartCount');
+    const totalPriceElement = document.getElementById('totalPrice');
+
+    let cartCount = localStorage.getItem('cartCount') || 0;
+    let totalPrice = localStorage.getItem('totalPrice') || 0;
+
+    cartCountElement.textContent = cartCount;
+    totalPriceElement.textContent = totalPrice;
+
+    // Funktion zum Hinzufügen zum Warenkorb
+    function addToCart() {
+      cartCount++;
+      totalPrice += 10; // Annahme: Jedes Produkt kostet $10
+
+      cartCountElement.textContent = cartCount;
+      totalPriceElement.textContent = totalPrice;
+
+      // Speichern der aktualisierten Werte in LocalStorage
+      localStorage.setItem('cartCount', cartCount);
+      localStorage.setItem('totalPrice', totalPrice);
+    }
+
+    // Funktion zum Entfernen aus dem Warenkorb
+    function removeFromCart() {
+      if (cartCount > 0) {
+        cartCount--;
+        totalPrice -= 10; // Annahme: Jedes Produkt kostet $10
+
+        cartCountElement.textContent = cartCount;
+        totalPriceElement.textContent = totalPrice;
+
+        // Speichern der aktualisierten Werte in LocalStorage
+        localStorage.setItem('cartCount', cartCount);
+        localStorage.setItem('totalPrice', totalPrice);
+      }
+    }
+  </script>
+</body>
+</html>

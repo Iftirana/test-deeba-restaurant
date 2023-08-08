@@ -9,7 +9,7 @@
 //}
 //ende
 
-
+  
 //funktion zum ansprechen der auswahl button für alle 
 let carts = document.querySelectorAll('.auswahl-btn');
 //ende
@@ -18,43 +18,43 @@ let carts = document.querySelectorAll('.auswahl-btn');
 let products = [
   {
     name: "Chicken Tikka",
-    tag:"chicken",
+    tag:"chicken-tikka",
     price: 9.9,
     inCart: 0
   },
   {
     name: "Chicken Qorma",
-    tag:"chicken",
+    tag:"chicken-qorma",
     price: 10.90,
     inCart: 0
   },
   {
     name: "Chicken Masala",
-    tag:"chicken",
+    tag:"chicken-masala",
     price: 8.90,
     inCart: 0
   },
   {
     name: "Butter Chicken",
-    tag:"chicken",
+    tag:"butter-chicken",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Chicken Saag",
-    tag:"chicken",
+    tag:"chicken-saag",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Beef Kebaab",
-    tag:"beef",
+    tag:"beef-kebaab",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Beef Spinat",
-    tag:"beef",
+    tag:"beef-spinat",
     price: 11.90,
     inCart: 0
   },
@@ -66,61 +66,61 @@ let products = [
   },
   {
     name: "Mutton Masala",
-    tag:"mutton",
+    tag:"mutton-masala",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Mutton Saag",
-    tag:"mutton",
+    tag:"mutton-saag",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Mutton Spinat",
-    tag:"mutton",
+    tag:"mutton-spinat",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Mutton Spinat",
-    tag:"mutton",
+    tag:"mutton-spinat",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Palak Panir",
-    tag:"vegi",
+    tag:"palak-panir",
     price: 9.90,
     inCart: 0
   },
   {
     name: "Mix Sabsi",
-    tag:"vegi",
+    tag:"mix-sabsi",
     price: 10.90,
     inCart: 0
   },
   {
     name: "Saag",
-    tag:"vegi",
+    tag:"saag",
     price: 8.90,
     inCart: 0
   },
   {
     name: "Bindi",
-    tag:"vegi",
+    tag:"bindi",
     price: 11.90,
     inCart: 0
   },
   {
     name: "Hänchen Suppe",
-    tag:"suppe",
+    tag:"hänchen-suppe",
     price: 9.90,
     inCart: 0
   },
   {
     name: "Daal Suppe",
-    tag:"suppe",
+    tag:"daal-suppe",
     price: 10.90,
     inCart: 0
   },
@@ -136,7 +136,7 @@ for (let i=0; i < carts.length; i++){
 }
 //ende
 
-//funktion, die item nummer aus der local sorage zu bekommen und in der korb zu anzeigen
+//funktion, die item nummer aus der localsorage zu bekommen und in der korb zu anzeigen
 function onloadCartNumbers(){
   let productNumbers = localStorage.getItem('cartNumbers');
 
