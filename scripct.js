@@ -232,8 +232,8 @@ function displayCart(){
        
           <div class="quantity">
             <button class="plus-btn"> + </button>
-            <button onClick="plus()" id="totalInCart" type="number" >${item.inCart}</button>
-            <button onClick="minus()" => item.inCart(value - 1) } class="minus-btn"> - </button>
+            <button id="totalInCart" type="number" >${item.inCart}</button>
+            <button class="minus-btn"> - </button>
           </div>
 
           <div>
@@ -261,14 +261,6 @@ function displayCart(){
   }
 }
 
-function plus() {
-  const=[value, setvalue] = useState(item.inCart);
-    item.inCart(value + 1)
-}
-function minus() {
-  const=[value, setvalue] = useState(item.inCart);
-  item.inCart(value - 1)
-}
 
   
 //code für die funktion von remove button in warenkorb
