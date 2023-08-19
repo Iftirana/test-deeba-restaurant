@@ -261,8 +261,6 @@ function displayCart(){
   }
 }
 
-
-  
 //code für die funktion von remove button in warenkorb
 function ready(){
   var removeCartItems = document.getElementsByClassName('btn-remove')
