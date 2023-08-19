@@ -228,11 +228,12 @@ function displayCart(){
           
           <div class="price">${item.price}0 € 
           </div>
-       
+       //onClick={() => item.inCart(value + 1) }
+       //onClick={() => item.inCart(value - 1) }
           <div class="quantity">
             <button class="plus-btn"> + </button>
-            <button id="totalInCart" type="number" >${item.inCart}</button>
-            <button class="minus-btn"> - </button>
+            <button onClick={() => item.inCart(value + 1) } id="totalInCart" type="number" >${item.inCart}</button>
+            <button onClick={() => item.inCart(value - 1) } class="minus-btn"> - </button>
           </div>
 
           <div>
