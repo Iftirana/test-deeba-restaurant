@@ -9,6 +9,7 @@
 //}
 //ende
 
+
   
 //funktion zum ansprechen der auswahl button für alle 
 let carts = document.querySelectorAll('.auswahl-btn');
@@ -228,12 +229,11 @@ function displayCart(){
           
           <div class="price">${item.price}0 € 
           </div>
-       //onClick={() => item.inCart(value + 1) }
-       //onClick={() => item.inCart(value - 1) }
+       
           <div class="quantity">
             <button class="plus-btn"> + </button>
-            <button onClick={() => item.inCart(value + 1) } id="totalInCart" type="number" >${item.inCart}</button>
-            <button onClick={() => item.inCart(value - 1) } class="minus-btn"> - </button>
+            <button onClick="plus()" id="totalInCart" type="number" >${item.inCart}</button>
+            <button onClick="minus()" => item.inCart(value - 1) } class="minus-btn"> - </button>
           </div>
 
           <div>
@@ -261,6 +261,16 @@ function displayCart(){
   }
 }
 
+function plus() {
+  const=[value, setvalue] = useState(item.inCart);
+    item.inCart(value + 1)
+}
+function minus() {
+  const=[value, setvalue] = useState(item.inCart);
+  item.inCart(value - 1)
+}
+
+  
 //code für die funktion von remove button in warenkorb
 function ready(){
   var removeCartItems = document.getElementsByClassName('btn-remove')
