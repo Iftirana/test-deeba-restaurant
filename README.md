@@ -1,8 +1,5 @@
 # Deeba-restaurant
 
-# In diesem Projekt werden folgende Sprachen benutzt  
-* HTML, CSS & JavaScript
-  
 # Infos
 * Das ist ein Test Restaurant Webseite mit
 * Einem Homepage
