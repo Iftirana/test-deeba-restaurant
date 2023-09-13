@@ -1,16 +1,4 @@
-//funktion zum öffnen und schließen von warenkorb
-
-//function openForm() {
-  //document.getElementById("myForm").style.display = "block";
-  //class="open-button" onclick="openForm()" class="btn cancel" onclick="closeForm()"
-//}
-//function closeForm() {
-  //document.getElementById("myForm").style.display = "none";
-//}
-//ende
-
-
-  
+ 
 //funktion zum ansprechen der auswahl button für alle 
 let carts = document.querySelectorAll('.auswahl-btn');
 //ende
@@ -20,109 +8,109 @@ let products = [
   {
     name: "Chicken Tikka",
     tag:"chicken-tikka",
-    price: 9.9,
+    price: 9,
     inCart: 0
   },
   {
     name: "Chicken Qorma",
     tag:"chicken-qorma",
-    price: 10.90,
+    price: 10,
     inCart: 0
   },
   {
     name: "Chicken Masala",
     tag:"chicken-masala",
-    price: 8.90,
+    price: 8,
     inCart: 0
   },
   {
     name: "Butter Chicken",
     tag:"butter-chicken",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Chicken Saag",
     tag:"chicken-saag",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Beef Kebaab",
     tag:"beef-kebaab",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Beef Spinat",
     tag:"beef-spinat",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Grill Kotelett",
     tag:"grill",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Mutton Masala",
     tag:"mutton-masala",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Mutton Saag",
     tag:"mutton-saag",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Mutton Spinat",
     tag:"mutton-spinat",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Mutton Spinat",
     tag:"mutton-spinat",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Palak Panir",
     tag:"palak-panir",
-    price: 9.90,
+    price: 9,
     inCart: 0
   },
   {
     name: "Mix Sabsi",
     tag:"mix-sabsi",
-    price: 10.90,
+    price: 10,
     inCart: 0
   },
   {
     name: "Saag",
     tag:"saag",
-    price: 8.90,
+    price: 8,
     inCart: 0
   },
   {
     name: "Bindi",
     tag:"bindi",
-    price: 11.90,
+    price: 11,
     inCart: 0
   },
   {
     name: "Hänchen Suppe",
     tag:"hänchen-suppe",
-    price: 9.90,
+    price: 9,
     inCart: 0
   },
   {
     name: "Daal Suppe",
     tag:"daal-suppe",
-    price: 10.90,
+    price: 10,
     inCart: 0
   },
 ]
@@ -192,105 +180,142 @@ function setItem(product){
   (cartItems));
 }
 
-//funktion zu ausrechnen der gesammt preis für local storage
+//funktion zum ausrechnen der gesammt preis für local storage
 function totalCost(product){
-  //console.log("the product proice is", product.price); 
+  //console.log("the product price is", product.price); 
   let cartCost = localStorage.getItem('totalCost');
   //console.log("my cart cost ist", cartCost)
   if(cartCost != null) {
     cartCost = parseFloat(cartCost);
-    localStorage.setItem("totalCost", cartCost +
-    product.price);
+    localStorage.setItem("totalCost", cartCost + product.price);
   }else {
     localStorage.setItem("totalCost", product.price);
   }
 }
-  //.toFixed(2) für später benutzen, damit weniger kommastellen angezeigt werden.
 
-//funktion zum anzeige der werte in warenkorb von local storage
-function displayCart(){
+//chat GPT
+function displayCart() {
   let cartItems = localStorage.getItem("productsInCart");
   cartItems = JSON.parse(cartItems);
-  let productContainer = document.querySelector
-  (".products");
+  let productContainer = document.querySelector(".products");
   let cartCost = localStorage.getItem('totalCost');
- 
-  //console.log(cartItems);
 
-  if( cartItems && productContainer ) {
+  if (cartItems && productContainer) {
     productContainer.innerHTML = '';
     Object.values(cartItems).map(item => {
-      productContainer.innerHTML += 
-      `
-      <div class="product">
-          
-          <img src="./bilder/${item.tag}.jpg">
-          <span> ${item.name} </span>
-          
-          <div class="price">${item.price}0 € 
-          </div>
-       
-          <div class="quantity">
-            <button class="plus-btn"> + </button>
-            <button id="totalInCart" type="number" >${item.inCart}</button>
-            <button class="minus-btn"> - </button>
-          </div>
-
-          <div>
-          <button class="btn-remove"> LÖSCHEN </button>
-          </div>
-          
-          <div class="total">
-            ${item.inCart * item.price}0 €
-          </div>
-          
-      </div>
-      `
-    });
-    
-    productContainer.innerHTML += `
-        <div class="basketTotalContainer">
-        <h4 class="basketTotalTittle">
-          GesamtSumme:
-        </h4>
-        <h4 class"basketTotal">
-          ${cartCost} €
-        </h4>
+      productContainer.innerHTML += `
+        <div class="product">
+        <img src="./bilder/${item.tag}.jpg">
+        <span> ${item.name} </span>
+        
+        <div class="price">${item.price} € 
         </div>
+     
+        <div class="quantity">
+          <div id="totalInCart"  style= "border: 1px solid black;"> ${item.inCart} </div>
+        </div>
+
+        <div>
+          <button class="btn-remove" data-tag="${item.tag}"> LÖSCHEN </button>
+        </div>
+        <div class="total">
+          ${item.inCart * item.price} €
+        </div>
+      </div>
       `;
+    });
+
+    productContainer.innerHTML += `
+      <div class="basketTotalContainer">
+        <h4 class="basketTotalTittle">
+          Gesamt&#160;Summe:
+        </h4>
+        &nbsp; &nbsp; &#160; &nbsp; &#160; &nbsp; &#160; &nbsp;
+        <h4 class="basketTotal">
+         ${cartCost}&#160;€
+        </h4>
+      </div>
+    `;
+
+    // Jetzt hinzugefügt: Eventlistener für LÖSCHEN-Button
+    let removeButtons = document.querySelectorAll('.btn-remove');
+    removeButtons.forEach(button => {
+      button.addEventListener('click', removeFromCart);
+    });
   }
 }
 
-//code für die funktion von remove button in warenkorb
-function ready(){
-  var removeCartItems = document.getElementsByClassName('btn-remove')
-  //console.log(removeCartItems)
-  for (var i = 0; i < removeCartItems.length; i++) {
-    var  button = removeCartItems[i]
-    button.addEventListener('click', removeFromCart)
+// Funktion zum Aktualisieren der Warenkorb-Anzeige
+function updateCartCount() {
+  let productNumbers = localStorage.getItem('cartNumbers');
+  if (productNumbers) {
+    document.querySelector('.open-button span').textContent = productNumbers;
   }
 }
-function removeFromCart(event){
-  var buttonClicked = event.target
-  buttonClicked.parentElement.parentElement.remove()
-  //console.log('clicked') 
+
+// Funktion, um einen Artikel aus dem Warenkorb zu entfernen
+function removeFromCart(event) {
+  let buttonClicked = event.target;
+  let productTag = buttonClicked.getAttribute('data-tag');
+
+  // Aktualisieren Sie den Warenkorb im localStorage
+  let cartItems = localStorage.getItem("productsInCart");
+  cartItems = JSON.parse(cartItems);
+
+  if (cartItems && cartItems[productTag]) {
+    // Reduzieren Sie die Anzahl des ausgewählten Artikels im Warenkorb
+    cartItems[productTag].inCart--;
+
+    // Aktualisieren Sie die Anzahl der Artikel im Warenkorb im localStorage
+    let cartNumbers = localStorage.getItem('cartNumbers');
+    cartNumbers = parseInt(cartNumbers);
+    cartNumbers--;
+    localStorage.setItem('cartNumbers', cartNumbers);
+
+    // Aktualisieren Sie den cartCost im localStorage
+    let cartCost = localStorage.getItem('totalCost');
+    cartCost = parseFloat(cartCost);
+    cartCost -= cartItems[productTag].price;
+    localStorage.setItem('totalCost', cartCost);
+
+    // Wenn die Anzahl null erreicht, entfernen Sie den Artikel aus dem Warenkorb
+    if (cartItems[productTag].inCart === 0) {
+      delete cartItems[productTag];
+    }
+
+    // Aktualisieren Sie den localStorage
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
+
+    // Aktualisieren Sie die Anzeige des Warenkorbs
+    displayCart();
+    updateCartCount();
+  }
 }
 
-// gesamtsumme muss noch geändert werden
-// funktion von buttom für anzahl der artikal im korb muss noch addieren
+// Selektieren Sie alle Elemente mit der Klasse .auswahl-btn
+const auswahlButtons = document.querySelectorAll('.auswahl-btn');
 
+// Schleife durch jedes Button-Element
+auswahlButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Speichern Sie den ursprünglichen Text in einem Datenattribut
+    const originalText = button.getAttribute('data-original-text');
+
+    // Ändern Sie die Hintergrundfarbe
+    button.style.backgroundColor = "#595959";
+    
+    // Ändern Sie den Text auf "Add To Cart"
+    button.innerHTML = "Added To Cart";
+
+    // Nach 1 Sekunde die Hintergrundfarbe und den Text zurücksetzen
+    setTimeout(() => {
+      button.style.backgroundColor = "";
+      button.innerHTML = originalText;
+    }, 1000);
+  });
+});
 
 //aufrufen der funtion
 onloadCartNumbers();
 displayCart();
-ready();
 //ende
-
-
-
-
-
-
-
-
-

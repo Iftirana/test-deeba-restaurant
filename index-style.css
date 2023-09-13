@@ -254,9 +254,12 @@
     align-items: center;
 }
 .text2 a{
-    background-color: #0adf23c5;
-    padding: 2px;
+    background-color: #1798bc3d;
+    padding: 4px;
     border-radius: 5px;
+}
+.text2 a:hover{
+  background-color: #07c9ff83;  
 }
 .text3 p{
     font-family: "Lato", arial;
