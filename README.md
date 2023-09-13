@@ -1,4 +1,4 @@
-# test-deeba-restaurant
+# Deeba-restaurant
 
 # Infos
 * Das ist ein Test Restaurant Webseite mit
