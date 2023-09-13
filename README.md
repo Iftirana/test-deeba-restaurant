@@ -38,3 +38,9 @@
 * Warenkorb auf iPhone 12 Pro
 
 ![deeba9](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/9a814ea0-db02-4a83-b306-d946685874ab)
+
+
+
+
+https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/9ed4844e-6013-4616-8a5a-554fe0c06f16
+
