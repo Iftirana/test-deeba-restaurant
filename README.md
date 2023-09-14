@@ -11,8 +11,11 @@
 # Screenshots
 * Homepage
 
-![deeba](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/d508fc20-d311-40ae-afa7-9a5cb20d5ae6)
-![deeba1](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/8f7ea17f-25f5-414e-b0ca-99c7e9091b20)
+![deeba](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/a3923ead-32ea-4ef8-9e30-91e8dd29ffd3)
+
+![deeba1](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/cbc39fb2-1caf-4144-8cc7-61d3eb7591a3)
+
+![debba11](https://github.com/Iftirana/test-deeba-restaurant/assets/127227435/3cd1b422-824c-4fed-ad5a-193641b12aca)
 
 * Homepage auf iPhone 12 Pro
 
