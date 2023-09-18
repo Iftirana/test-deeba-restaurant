@@ -1,358 +1,364 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-      font-family: Helvetica;
-      padding-top: 70px;
-      margin: 0;
-      height: 1000px;    
-    }
-    a {
-      text-transform: uppercase;
-      text-decoration: none;
-      color: #000;
-    }
-    /* Risponsive header fängt an*/
-    .header { 
-      top: 0;
-      width: 100%;
-      position: fixed;
-      z-index: 99;
-      right: 0;
-      left: 0;
-      background-color: #fff;
-      border-bottom: 1px solid #000000;
-      padding: 0 0;
-      background: transparent;
-      backdrop-filter: blur(5px);
-    }
-    .header::after {
-      content: "";
-      display: table;
-      clear: both;
-    }
-    .logo-und-name {
-      float: left;
-    }
-    .logo-und-name h1 {
-      font-size: x-large; /*1.5em*/
-      font-weight: 800;
-      margin: .9em 0 0 0;
-      display: inline-block;
-    }
-    .logo-und-name img {
-      max-width: 55px;
-      float: left;
-      margin: 7px 10px 8px 10px;
-    } 
-    .nav  .nav-header {
-      display: inline;
-    }
-    .nav  .nav-header > .nav-title {
-      display: inline-block;
-      font-size: 22px;
-      color: #000000;
-      padding: 10px 10px 10px 10px;
-    }
-    .nav  .nav-btn {
-      display: none;
-    }
-    .nav  .nav-links {
-      display: inline;
-      float: right;
-      font-size: 18px;
-    }
-    .nav  .nav-links > a {
-      display: inline-block;
-      padding: 10px 10px 10px 10px;
-      text-decoration: none;
-      color: #000000;
-    }
-    .nav  .nav-links > a:hover {
-      background-color: #fa0202bc;
-      border-radius: 10px;
-      border-bottom: 2px solid black;
-    }
-    .nav  #nav-check  {
-      display: none;
-    }
-    .korb{
-      margin: 0px;
-      padding: 0px;
-      height: 40px;
-      width: 40px;
-    }
-    .loginsymbol{
-      margin: 0px;
-      padding: 0px;
-      height: 40px;
-      width: 40px;
-    }
-    .count-items{
-      position: relative;
-      bottom: 25px;
-    }
+  box-sizing: border-box;
+}
+body {
+  font-family: Helvetica;
+  padding-top: 70px;
+  margin-bottom: 0px;
+}
+a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+}
+/* Risponsive header fängt an*/
+.header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+  padding: 0 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo-und-name {
+  float: left;
+}
+.logo-und-name h1 {
+  font-size: x-large; /*1.5em*/
+  font-weight: 800;
+  margin: 0.9em 0 0 0;
+  display: inline-block;
+}
+.logo-und-name img {
+  max-width: 55px;
+  float: left;
+  margin: 7px 10px 8px 10px;
+}
+.nav .nav-header {
+  display: inline;
+}
+.nav .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+}
+.nav .nav-btn {
+  display: none;
+}
+.nav .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+.nav .nav-links > a {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+.nav .nav-links > a:hover {
+  background-color: #fa0202bc;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+}
+.nav #nav-check {
+  display: none;
+}
+.korb {
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+.loginsymbol {
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+.count-items {
+  position: relative;
+  bottom: 25px;
+}
 
-    @media screen and  (max-width:920px) {
-      .nav > .nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 0px;
-      }
-      .nav > .nav-btn > label {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-      }
-      .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-        background-color: rgba(78, 65, 65, 0.3);
-      }
-      .nav > .nav-btn > label > span {
-        display: block;
-        width: 30px;
-        height: 15px;
-        border-top: 2px solid #000000;
-      }
-      .nav > .nav-links {
-        position: fixed;
-        z-index: 99;
-        display: block;
-        width: 40%;
-        height: 50%;
-        background-color: #df0a0a;
-        transition: all 0.1s ease-in;
-        overflow-y: hidden;
-        top: 50px;
-        left: 60%;
-      }
-      .nav > .nav-links > a {
-        display: block;
-        width: 100%;
-        color: #000000;
-      }
-      
-      .nav > #nav-check:not(:checked) ~ .nav-links {
-        height: 0%;
-      }
-      .nav > #nav-check:checked ~ .nav-links {
-        height: calc(48vh - 10px);
-        overflow-y: auto;
-      }
-      .mape{
-        height: calc(30px - 10px) ;
-      }
-    }
-    /* The popup form - hidden by default */
-  .form-popup {
-    display: none;
+@media screen and (max-width: 920px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(78, 65, 65, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
     position: fixed;
-    width: 80%;
-    bottom: 50%;
-    right: 10%;
-    top: 15%;
-    z-index: 9;
+    z-index: 99;
+    display: block;
+    width: 40%;
+    height: 50%;
+    background-color: #df0a0a;
+    transition: all 0.1s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 60%;
   }
-  
-  /* Add styles to the form container */
-  .form-container {
-    padding: 10px;
-    background-color: white;
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #000000;
   }
-  .products-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-bottom: 100px;
 
-    max-width: 650px;
-    justify-content: space-around;
-    margin: 0 auto;
-    margin-top: 50px;
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0%;
   }
-  .product-header{
-    width: 100%;
-    max-width: 650px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    margin-top: 0px;
-    border-bottom: 2px solid lightgray;
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(48vh - 10px);
+    overflow-y: auto;
   }
-  .product-title {
-    width: 27%;
+  .mape {
+    height: calc(30px - 10px);
   }
-  .price {
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  width: 80%;
+  bottom: 50%;
+  right: 10%;
+  top: 15%;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  padding: 10px;
+  background-color: white;
+}
+.products-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+
+  max-width: 650px;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.product-header {
+  width: 100%;
+  max-width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0px;
+  border-bottom: 2px solid lightgray;
+}
+.product-title {
+  width: 27%;
+}
+.price {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.quantity {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+.total {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+#totalInCart {
+  width: 25%;
+  display: flex;
+  justify-content: center;
+}
+.btn-remove {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(245, 82, 41);
+  border-radius: 4px;
+  border: none;
+  font-weight: 100;
+  padding: 5px;
+  cursor: pointer;
+}
+.btn-remove:hover {
+  background-color: #e11010;
+}
+.product img {
+  width: 15%;
+}
+.product {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 2px solid lightgray;
+}
+.basketTotalContainer {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 10px 30px;
+}
+.basketTotalTittle {
+  width: 30%;
+}
+.basketTotal {
+  width: 10%;
+}
+/* Full-width input fields */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+/* When the inputs get focus, do something */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.for-btn {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  background-color: #04aa6d;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  width: 47%;
+  height: 50px;
+  margin: 3px;
+  margin-bottom: 50px;
+  opacity: 0.9;
+  font-size: 21px;
+  font-weight: 300;
+}
+
+/* Add a red background color to the cancel button */
+.cancel {
+  background-color: rgb(252, 0, 0);
+}
+/* Add some hover effects to buttons */
+.btn:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 767px) {
+  .cardBox {
+    margin-left: 2.8%;
+    margin-top: 3%;
     width: 30%;
-    display: flex;
-    justify-content: center;
   }
-  .quantity {
-    width: 25%;
-    display: flex;
-    justify-content: center;
+  .card {
+    height: 150px;
   }
-  .total {
-    width: 25%;
-    display: flex;
-    justify-content: center;
+  .card p {
+    font-size: small;
+    height: 100%;
   }
-  #totalInCart{
-    width: 25%;
-    display: flex;
-    justify-content: center;
+  .auswahl-btn {
+    font-size: small;
   }
-  .btn-remove{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(245, 82, 41);
-    border-radius: 4px;
-    border: none;
-    font-weight: 100;
-    padding: 5px;
-    cursor: pointer;
+  .gericht-art1 {
+    width: 96%;
+    margin-left: 2.8%;
   }
-  .btn-remove:hover{
-    background-color: #e11010;
-  }
-  .product img {
-    width: 15%;
-  }
-  .product {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;   
-    padding: 10px 0;
-    border-bottom: 2px solid lightgray;
-  }
-  .basketTotalContainer{
-    display: flex;
-    justify-content: end;
-    width: 100%;
-    padding: 10px 30px;
-  }
-  .basketTotalTittle{
-    width: 30%;
-  }
-  .basketTotal{
-    width: 10%;
-  }
-  /* Full-width input fields */
-  .form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
-    border: none;
-    background: #f1f1f1;
-  }
-  /* When the inputs get focus, do something */
-  .form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
-    outline: none;
-  }
-  
-  /* Set a style for the submit/login button */
-  .for-btn{
-    max-width: 650px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .gericht-art {
+    width: 96%;
+    margin-left: 2.8%;
   }
   .btn {
-    background-color: #04AA6D;
-    color: rgb(0, 0, 0);
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    width: 47%;
-    height: 50px;
-    margin: 3px;
-    margin-bottom: 50px;
-    opacity: 0.9;
-    font-size: 21px;
-    font-weight: 300;
+    font-size: 19px;
   }
-  
-  /* Add a red background color to the cancel button */
-  .cancel {
-    background-color: rgb(252, 0, 0);
-  }  
-  /* Add some hover effects to buttons */
-  .btn:hover {
-    opacity: 1;
+  .product-title {
+    margin-left: 10px;
   }
-  @media screen and (max-width: 767px) {
-    .cardBox {
-      margin-left: 2.8%;
-      margin-top: 3%;
-      width: 30%;
-    }
-    .card {
-      height: 150px;
-    }
-    .card p {
-      font-size: small;
-      height: 100%;
-    }
-    .auswahl-btn{
-      font-size: small;
-    }
-    .gericht-art1 {
-      width: 96%;
-      margin-left: 2.8%;
-    }
-    .gericht-art{
-      width: 96%;
-      margin-left: 2.8%;
-    }
-    .btn{
-      font-size: 19px;
-    }
-  }  
-  @media screen and (max-width: 480px) {
-    .cardBox {
-      width: 30%;
-    }
-    .card {
-      height: 130px;
-    }
-    .card p {
-      font-size: xx-small;
-      height: 100%;
-    }
-    .auswahl-btn{
-      font-size: x-small;
-    }
-    .gericht-art1{
-      width: 95%;
-      margin-left: 2.8%;
-    }
-    .gericht-art{
-      width: 95%;
-      margin-left: 2.8%;
-    }
-    .btn{
-      font-size: 15px;
-
-    }
+  .total {
+    margin-right: 10px;
   }
-  @media screen and (max-width: 400px) {
-    .logo-und-name h1 {
-      font-size: 15px;
-      font-weight: 900;
-      margin-top: 10%;
-    }
+}
+@media screen and (max-width: 480px) {
+  .cardBox {
+    width: 30%;
+  }
+  .card {
+    height: 130px;
+  }
+  .card p {
+    font-size: xx-small;
+    height: 100%;
+  }
+  .auswahl-btn {
+    font-size: x-small;
+  }
+  .gericht-art1 {
+    width: 95%;
+    margin-left: 2.8%;
+  }
+  .gericht-art {
+    width: 95%;
+    margin-left: 2.8%;
+  }
+  .btn {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo-und-name h1 {
+    font-size: 15px;
+    font-weight: 900;
+    margin-top: 10%;
+  }
   .card p {
     font-size: x-small;
     font-weight: 400;
   }
   .menuname {
-    font-size: 10px ;
+    font-size: 10px;
     font-weight: 100;
   }
-  
 }

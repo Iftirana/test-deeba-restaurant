@@ -1,6 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(179, 177, 177);
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
 /* Risponsive header fängt an*/
-.header { 
+.header {
   top: 0;
   width: 100%;
   position: fixed;
@@ -24,62 +32,62 @@
 .logo-und-name h1 {
   font-size: x-large; /*1.5em*/
   font-weight: 800;
-  margin: .9em 0 0 0;
+  margin: 0.9em 0 0 0;
   display: inline-block;
 }
 .logo-und-name img {
   max-width: 55px;
   float: left;
   margin: 7px 10px 8px 10px;
-} 
-.nav  .nav-header {
+}
+.nav .nav-header {
   display: inline;
 }
-.nav  .nav-header > .nav-title {
+.nav .nav-header > .nav-title {
   display: inline-block;
   font-size: 22px;
   color: #000000;
   padding: 10px 10px 10px 10px;
 }
-.nav  .nav-btn {
+.nav .nav-btn {
   display: none;
 }
-.nav  .nav-links {
+.nav .nav-links {
   display: inline;
   float: right;
   font-size: 18px;
 }
-.nav  .nav-links > a {
+.nav .nav-links > a {
   display: inline-block;
   padding: 10px 10px 10px 10px;
   text-decoration: none;
   color: #000000;
 }
-.nav  .nav-links > a:hover {
+.nav .nav-links > a:hover {
   background-color: #c80808bc;
   border-radius: 10px;
   border-bottom: 2px solid black;
 }
-.nav  #nav-check  {
+.nav #nav-check {
   display: none;
 }
-.korb{
+.korb {
   margin: 0px;
   padding: 0px;
   height: 40px;
   width: 40px;
 }
-.loginsymbol{
+.loginsymbol {
   margin: 0px;
   padding: 0px;
   height: 40px;
   width: 40px;
 }
-.count-items{
+.count-items {
   position: relative;
   bottom: 25px;
 }
-@media screen and  (max-width:920px) {
+@media screen and (max-width: 920px) {
   .nav > .nav-btn {
     display: inline-block;
     position: absolute;
@@ -92,7 +100,8 @@
     height: 50px;
     padding: 13px;
   }
-  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
     background-color: rgba(78, 65, 65, 0.3);
   }
   .nav > .nav-btn > label > span {
@@ -125,8 +134,8 @@
     height: calc(48vh - 10px);
     overflow-y: auto;
   }
-  .mape{
-    height: calc(30px - 10px) ;
+  .mape {
+    height: calc(30px - 10px);
   }
 }
 @media screen and (max-width: 400px) {
@@ -136,15 +145,6 @@
     margin-top: 13%;
   }
 }
-
-body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: rgb(179, 177, 177);
-}
-
-* {
-box-sizing: border-box;
-}
 .header a {
   text-transform: uppercase;
   text-decoration: none;
@@ -153,61 +153,63 @@ box-sizing: border-box;
 
 /* Add padding to containers */
 .container {
-max-width: 900px;
-height: fit-content;
-margin: 100px auto 0px auto;
-padding: 16px;
-background-color: white;
+  max-width: 900px;
+  height: fit-content;
+  margin: 100px auto 0px auto;
+  padding: 16px;
+  background-color: white;
 }
 
 /* Full-width input fields */
-input[type=text], input[type=password] {
-width: 100%;
-padding: 15px;
-margin: 5px 0 22px 0;
-display: inline-block;
-border: none;
-background: #f1f1f1;
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-background-color: #ddd;
-outline: none;
+input[type="text"]:focus,
+input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
 }
 
 /* Overwrite default styles of hr */
 hr {
-border: 1px solid #f1f1f1;
-margin-bottom: 25px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
 }
 
 /* Set a style for the submit button */
 .registerbtn {
-background-color: #04AA6D;
-color: white;
-padding: 16px 20px;
-margin: 8px 0;
-border: none;
-cursor: pointer;
-width: 100%;
-opacity: 0.9;
+  background-color: #04aa6d;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
 }
 
 .registerbtn:hover {
-opacity: 1;
+  opacity: 1;
 }
 
 /* Add a blue text color to links */
 a {
-color: dodgerblue;
+  color: dodgerblue;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
 .signin {
-margin-top: 20px;
-background-color: #f1f1f1;
-text-align: center;
-}  
+  margin-top: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
 
 @media screen and (max-width: 767px) {
   .cardBox {
@@ -222,18 +224,18 @@ text-align: center;
     font-size: small;
     height: 100%;
   }
-  .auswahl-btn{
+  .auswahl-btn {
     font-size: small;
   }
   .gericht-art1 {
     width: 96%;
     margin-left: 2.8%;
   }
-  .gericht-art{
+  .gericht-art {
     width: 96%;
     margin-left: 2.8%;
   }
-}  
+}
 @media screen and (max-width: 480px) {
   .cardBox {
     width: 30%;
@@ -245,14 +247,14 @@ text-align: center;
     font-size: xx-small;
     height: 100%;
   }
-  .auswahl-btn{
+  .auswahl-btn {
     font-size: x-small;
   }
-  .gericht-art1{
+  .gericht-art1 {
     width: 95%;
     margin-left: 2.8%;
   }
-  .gericht-art{
+  .gericht-art {
     width: 95%;
     margin-left: 2.8%;
   }
@@ -263,13 +265,74 @@ text-align: center;
     font-weight: 900;
     margin-top: 10%;
   }
-.card p {
-  font-size: x-small;
-  font-weight: 400;
+  .card p {
+    font-size: x-small;
+    font-weight: 400;
+  }
+  .menuname {
+    font-size: 10px;
+    font-weight: 100;
+  }
 }
-.menuname {
-  font-size: 10px ;
-  font-weight: 100;
+/* footer */
+
+.site-footer {
+  background-color: #26272b;
+  padding: 15px 20px;
+  margin-top: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #737373;
 }
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr.small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.text-justify {
+  margin: 15px auto;
+  margin-left: 10px;
+}
+.Rights {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}
+.site-footer a {
+  color: #737373;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #3366cc;
 }
 
+.copyright-text {
+  margin: 0px;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}

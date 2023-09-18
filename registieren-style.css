@@ -1,144 +1,3 @@
-
-/* Risponsive header fängt an*/
-.header { 
-    top: 0;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-    right: 0;
-    left: 0;
-    background-color: #fff;
-    border-bottom: 1px solid #000000;
-    padding: 0 0;
-    background: transparent;
-    backdrop-filter: blur(5px);
-  }
-  .header::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .logo-und-name {
-    float: left;
-  }
-  .logo-und-name h1 {
-    font-size: x-large; /*1.5em*/
-    font-weight: 800;
-    margin: .9em 0 0 0;
-    display: inline-block;
-  }
-  .logo-und-name img {
-    max-width: 55px;
-    float: left;
-    margin: 7px 10px 8px 10px;
-  } 
-  .nav  .nav-header {
-    display: inline;
-  }
-  .nav  .nav-header > .nav-title {
-    display: inline-block;
-    font-size: 22px;
-    color: #000000;
-    padding: 10px 10px 10px 10px;
-  }
-  .nav  .nav-btn {
-    display: none;
-  }
-  .nav  .nav-links {
-    display: inline;
-    float: right;
-    font-size: 18px;
-  }
-  .nav  .nav-links > a {
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-    text-decoration: none;
-    color: #000000;
-  }
-  .nav  .nav-links > a:hover {
-    background-color: #c80808bc;
-    border-radius: 10px;
-    border-bottom: 2px solid black;
-  }
-  .nav  #nav-check  {
-    display: none;
-  }
-  .korb{
-    margin: 0px;
-    padding: 0px;
-    height: 40px;
-    width: 40px;
-  }
-  .loginsymbol{
-    margin: 0px;
-    padding: 0px;
-    height: 40px;
-    width: 40px;
-  }
-  
-  .count-items{
-    position: relative;
-    bottom: 25px;
-
-  }
-  @media screen and  (max-width:920px) {
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(78, 65, 65, 0.3);
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 30px;
-      height: 15px;
-      border-top: 2px solid #000000;
-    }
-    .nav > .nav-links {
-      position: fixed;
-      z-index: 99;
-      display: block;
-      width: 40%;
-      height: 50%;
-      background-color: #df0a0a;
-      transition: all 0.1s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 60%;
-    }
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-      color: #000000;
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0%;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(48vh - 10px);
-      overflow-y: auto;
-    }
-    .mape{
-      height: calc(30px - 10px) ;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .logo-und-name h1 {
-      font-size: small;
-      font-weight: 850;
-      margin-top: 13%;
-    }
-  }
-  
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(179, 177, 177);
@@ -146,11 +5,152 @@ body {
 
 * {
   box-sizing: border-box;
+  margin: 0px;
 }
+/* Risponsive header fängt an*/
+.header {
+  top: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #000000;
+  padding: 0 0;
+  background: transparent;
+  backdrop-filter: blur(5px);
+}
+.header::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.logo-und-name {
+  float: left;
+}
+.logo-und-name h1 {
+  font-size: x-large; /*1.5em*/
+  font-weight: 800;
+  margin: 0.9em 0 0 0;
+  display: inline-block;
+}
+.logo-und-name img {
+  max-width: 55px;
+  float: left;
+  margin: 7px 10px 8px 10px;
+}
+.nav .nav-header {
+  display: inline;
+}
+.nav .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: #000000;
+  padding: 10px 10px 10px 10px;
+}
+.nav .nav-btn {
+  display: none;
+}
+.nav .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+.nav .nav-links > a {
+  display: inline-block;
+  padding: 10px 10px 10px 10px;
+  text-decoration: none;
+  color: #000000;
+}
+.nav .nav-links > a:hover {
+  background-color: #c80808bc;
+  border-radius: 10px;
+  border-bottom: 2px solid black;
+}
+.nav #nav-check {
+  display: none;
+}
+.korb {
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+.loginsymbol {
+  margin: 0px;
+  padding: 0px;
+  height: 40px;
+  width: 40px;
+}
+
+.count-items {
+  position: relative;
+  bottom: 25px;
+}
+@media screen and (max-width: 920px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,
+  .nav #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(78, 65, 65, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 30px;
+    height: 15px;
+    border-top: 2px solid #000000;
+  }
+  .nav > .nav-links {
+    position: fixed;
+    z-index: 99;
+    display: block;
+    width: 40%;
+    height: 50%;
+    background-color: #df0a0a;
+    transition: all 0.1s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 60%;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+    color: #000000;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0%;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(48vh - 10px);
+    overflow-y: auto;
+  }
+  .mape {
+    height: calc(30px - 10px);
+  }
+}
+@media screen and (max-width: 400px) {
+  .logo-und-name h1 {
+    font-size: small;
+    font-weight: 850;
+    margin-top: 13%;
+  }
+}
+
 .header a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
 }
 
 /* Add padding to containers */
@@ -163,7 +163,11 @@ body {
 }
 
 /* Full-width input fields */
-input[type=email], input[type=password], input[type=name],input[type=straße-Hausnummer],input[type=plz-stadt]{
+input[type="email"],
+input[type="password"],
+input[type="name"],
+input[type="straße-Hausnummer"],
+input[type="plz-stadt"] {
   width: 100%;
   padding: 15px;
   margin: 5px 0 22px 0;
@@ -173,7 +177,11 @@ input[type=email], input[type=password], input[type=name],input[type=straße-Hau
   font-size: medium;
 }
 
-input[type=email]:focus, input[type=password]:focus, input[type=name]:focus,input[type=straße-Hausnummer]:focus,input[type=plz-stadt]:focus{
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="name"]:focus,
+input[type="straße-Hausnummer"]:focus,
+input[type="plz-stadt"]:focus {
   background-color: #ddd;
   outline: none;
 }
@@ -210,7 +218,7 @@ a {
   background-color: #f1f1f1;
   text-align: center;
   margin-top: 10px;
-}  
+}
 
 @media screen and (max-width: 767px) {
   .cardBox {
@@ -225,18 +233,18 @@ a {
     font-size: small;
     height: 100%;
   }
-  .auswahl-btn{
+  .auswahl-btn {
     font-size: small;
   }
   .gericht-art1 {
     width: 96%;
     margin-left: 2.8%;
   }
-  .gericht-art{
+  .gericht-art {
     width: 96%;
     margin-left: 2.8%;
   }
-}  
+}
 @media screen and (max-width: 480px) {
   .cardBox {
     width: 30%;
@@ -248,14 +256,14 @@ a {
     font-size: xx-small;
     height: 100%;
   }
-  .auswahl-btn{
+  .auswahl-btn {
     font-size: x-small;
   }
-  .gericht-art1{
+  .gericht-art1 {
     width: 95%;
     margin-left: 2.8%;
   }
-  .gericht-art{
+  .gericht-art {
     width: 95%;
     margin-left: 2.8%;
   }
@@ -266,13 +274,74 @@ a {
     font-weight: 900;
     margin-top: 10%;
   }
-.card p {
-  font-size: x-small;
-  font-weight: 400;
+  .card p {
+    font-size: x-small;
+    font-weight: 400;
+  }
+  .menuname {
+    font-size: 10px;
+    font-weight: 100;
+  }
 }
-.menuname {
-  font-size: 10px ;
-  font-weight: 100;
+/* footer */
+
+.site-footer {
+  background-color: #26272b;
+  padding: 15px 20px;
+  margin-top: 100px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #737373;
 }
+.site-footer hr {
+  border-top-color: #bbb;
+  opacity: 0.5;
+}
+.site-footer hr.small {
+  margin: 20px 0;
+}
+.site-footer h6 {
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-top: 1px;
+  margin-bottom: 0px;
+  margin-left: 10px;
+  margin-right: 10px;
+  letter-spacing: 2px;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-self: flex-end;
+}
+.text-justify {
+  margin: 15px auto;
+  margin-left: 10px;
+}
+.Rights {
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 10px;
+}
+.site-footer a {
+  color: #737373;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  color: #3366cc;
 }
 
+.copyright-text {
+  margin: 0px;
+}
+
+@media (max-width: 767px) {
+  .site-footer {
+    padding-bottom: 0;
+  }
+  .site-footer .copyright-text,
+  .site-footer .social-icons {
+    text-align: center;
+  }
+}
